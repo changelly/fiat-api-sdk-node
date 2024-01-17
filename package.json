@@ -1,0 +1,45 @@
+{
+  "name": "@changelly/fiat-api-sdk-node",
+  "version": "1.0.1",
+  "description": "Node.js SDK for Changelly Fiat API",
+  "license": "MIT",
+  "keywords": [
+    "changelly",
+    "fiatapi"
+  ],
+  "scripts": {
+    "compile": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "clear": "rimraf dist/*",
+    "tsc": "tsc",
+    "make-bundle": "rollup --config",
+    "build": "npm run clear && npm run tsc && npm run make-bundle",
+    "watch": "tsc --watch"
+  },
+  "files": [
+    "changelly-fiat-api.d.ts",
+    "changelly-fiat-api.js",
+    "changelly-fiat-api.js.map"
+  ],
+  "main": "changelly-fiat-api.js",
+  "types": "changelly-fiat-api.d.ts",
+  "dependencies": {
+    "axios": "^1.5.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-typescript": "^11.1.4",
+    "@types/node": "^20.8.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^6.0.2",
+    "typescript": "^5.2.2"
+  }
+}
