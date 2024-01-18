@@ -265,10 +265,56 @@ interface ChangellyFiatClientParams {
 
 **Properties**
 
-- **publicKey**: _string_ — Changelly Fiat API public key.
-- **privateKey**: _string_ — Changelly Fiat API private key..
-- (optional) **callbackPublicKey**: _string_ — Changelly Fiat API callback public key.
-- (optional) **baseUrl**: _string_ — Base url of Changelly Fiat API. `https://fiat-api.changelly.com/v1` by default.
+<table><tbody>
+<tr>
+  <td>
+
+  **publicKey**
+
+  </td>
+  <td>
+
+  _string_ — Changelly Fiat API public key.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **privateKey**
+
+  </td>
+  <td>
+
+  _string_ — Changelly Fiat API private key.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **callbackPublicKey**
+
+  </td>
+  <td>
+
+  _string_ — Changelly Fiat API callback public key.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **baseUrl**
+
+  </td>
+  <td>
+
+  _string_ — Base url of Changelly Fiat API. `https://fiat-api.changelly.com/v1` by default.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyBuildSignatureParams
 
@@ -286,10 +332,56 @@ interface ChangellyBuildSignatureParams {
 
 **Properties**
 
-- (optional) **baseUrl**: _string_ — Base url. `https://fiat-api.changelly.com/v1` by default.
-- **pathname**: _[ChangellyRequestUrl](#changellyrequesturl) | string_ — Request address.
-- (optional) **params**: _[ChangellyGetCurrencyListParams](#changellygetcurrencylistparams) | [ChangellyGetCountryAvailabilityParams](#changellygetcountryavailabilityparams) | [ChangellyGetOffersParams](#changellygetoffersparams)_ — Request query parameteres.
-- (optional) **data**: _[ChangellyCreateOrderParams](#changellycreateorderparams) | [ChangellyValidateWalletAddressParams](#changellyvalidatewalletaddressparams)_ — Request body parameters.
+<table><tbody>
+<tr>
+  <td>
+
+  (optional) **baseUrl**
+
+  </td>
+  <td>
+
+  _string_ — Base url. `https://fiat-api.changelly.com/v1` by default.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **pathname**
+
+  </td>
+  <td>
+
+  _[ChangellyRequestUrl](#changellyrequesturl) | string_ — Request address.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **params**
+
+  </td>
+  <td>
+
+  _[ChangellyGetCurrencyListParams](#changellygetcurrencylistparams) | [ChangellyGetCountryAvailabilityParams](#changellygetcountryavailabilityparams) | [ChangellyGetOffersParams](#changellygetoffersparams)_ — Request query parameteres.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **data**
+
+  </td>
+  <td>
+
+  _[ChangellyCreateOrderParams](#changellycreateorderparams) | [ChangellyValidateWalletAddressParams](#changellyvalidatewalletaddressparams)_ — Request body parameters.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyGetProviderListResponse
 
@@ -304,10 +396,56 @@ interface ChangellyGetProviderListResponse {
 
 **Properties**
 
-- **code**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
-- **name**: _string_ — On-Ramp provider's name.
-- **trustPilotRating**: _string_ — Provider's rating on Trustpilot.
-- **iconUrl**: _string_ — URL of On-Ramp provider's icon.
+<table><tbody>
+<tr>
+  <td>
+
+  **code**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **name**
+
+  </td>
+  <td>
+
+  _string_ — On-Ramp provider's name.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **trustPilotRating**
+
+  </td>
+  <td>
+
+  _string_ — Provider's rating on Trustpilot.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **iconUrl**
+
+  </td>
+  <td>
+
+  _string_ — URL of On-Ramp provider's icon.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyGetCurrencyListParams
 
@@ -320,8 +458,32 @@ interface ChangellyGetCurrencyListParams {
 
 **Properties**
 
-- (optional) **type**: [_ChangellyCurrency_](#changellycurrency) — Type of currency. If the currency type is not specified, the endpoint will return both fiat currencies and cryptocurrencies.
-- (optional) **providerCode**: [_ChangellyProvider_](#changellyprovider) — The provider whose currencies you want to view. If the On-Ramp provider code is not specified, the endpoint will return the supported currencies of all providers.
+<table><tbody>
+<tr>
+  <td>
+
+  (optional) **type**
+
+  </td>
+  <td>
+
+  [_ChangellyCurrency_](#changellycurrency) — Type of currency. If the currency type is not specified, the endpoint will return both fiat currencies and cryptocurrencies.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — The provider whose currencies you want to view. If the On-Ramp provider code is not specified, the endpoint will return the supported currencies of all providers.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyGetCurrencyListResponse
 
@@ -338,12 +500,80 @@ interface ChangellyGetCurrencyListResponse {
 
 **Properties**
 
-- **ticker**: _string_ — Currency ticker in uppercase. It is a unique identifier of the currency.
-- **name**: _string_ — Currency name that you can specify in your interface.
-- **type**: [_ChangellyCurrency_](#changellycurrency) — Currency type.
-- **extraIdName**: _string | null_ — Extra ID name of the cryptocurrency, for example, "Memo". Required for the following currencies: XRP, XLM, EOS, BNB. For fiat currencies and cryptocurrencies without an extra ID, extraIdName equals null. If the currency has an extra ID, you need to provide the `walletExtraId` parameter in the request to `/v1/orders` and `/v1/validate-address` endpoints.
-- **iconUrl**: _string_ — URL of the currency icon.
-- **precision**: _string_ — Currency precision. For fiat currencies, it is always equal to 2.
+<table><tbody>
+<tr>
+  <td>
+
+  **ticker**
+
+  </td>
+  <td>
+
+  _string_ — Currency ticker in uppercase. It is a unique identifier of the currency.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **name**
+
+  </td>
+  <td>
+
+  _string_ — Currency name that you can specify in your interface.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **type**
+
+  </td>
+  <td>
+
+  [_ChangellyCurrency_](#changellycurrency) — Currency type.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **extraIdName**
+
+  </td>
+  <td>
+
+  _string | null_ — Extra ID name of the cryptocurrency, for example, "Memo". Required for the following currencies: XRP, XLM, EOS, BNB. For fiat currencies and cryptocurrencies without an extra ID, extraIdName equals null. If the currency has an extra ID, you need to provide the `walletExtraId` parameter in the request to `/v1/orders` and `/v1/validate-address` endpoints.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **iconUrl**
+
+  </td>
+  <td>
+
+  _string_ — URL of the currency icon.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **precision**
+
+  </td>
+  <td>
+
+  _string_ — Currency precision. For fiat currencies, it is always equal to 2.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyGetCountryAvailabilityParams
 
@@ -355,7 +585,20 @@ interface ChangellyGetCountryAvailabilityParams {
 
 **Properties**
 
-- (optional) **providerCode**: [_ChangellyProvider_](#changellyprovider) — The provider whose countries you want to view. If the On-Ramp provider code is not specified, the endpoint will return the supported countries of all providers.
+<table><tbody>
+<tr>
+  <td>
+
+  (optional) **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — The provider whose countries you want to view. If the On-Ramp provider code is not specified, the endpoint will return the supported countries of all providers.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyGetCountryAvailabilityResponse
 
@@ -368,6 +611,45 @@ interface ChangellyGetCountryAvailabilityResponse {
 ```
 
 **Properties**
+
+<table><tbody>
+<tr>
+  <td>
+
+  **code**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **name**
+
+  </td>
+  <td>
+
+  _string_ — On-Ramp provider's name.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **states**
+
+  </td>
+  <td>
+
+  [_ChangellyState_](#changellystate)[] — US states. Is returned if the code of the country is US.
+
+  </td>
+</tr>
+</tbody></table>
 
 - **code**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
 - **name**: _string_ — On-Ramp provider's name.
@@ -390,14 +672,102 @@ interface ChangellyGetOffersParams {
 
 **Properties**
 
-- (optional) **providerCode**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
-- (optional) **externalUserId**: _string_ — User ID provided by you.
-- **currencyFrom**: _string_ — Ticker of the pay-in currency in uppercase.
-- **currencyTo**: _string_ — Ticker of the payout currency in uppercase.
-- **amountFrom**: _string_ — Amount of currency the user is going to pay.
-- **country**: _string_ — Country ISO 3166-1 code (Alpha-2).
-- (optional) **state**: _string_ — State ISO 3166-2 code. Is required if the provided country is US.
-- (optional) **ip**: _string_ — User's IP address.
+<table><tbody>
+<tr>
+  <td>
+
+  (optional) **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **externalUserId**
+
+  </td>
+  <td>
+
+  _string_ — User ID provided by you.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **currencyFrom**
+
+  </td>
+  <td>
+
+  _string_ — Ticker of the pay-in currency in uppercase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **currencyTo**
+
+  </td>
+  <td>
+
+  _string_ — Ticker of the payout currency in uppercase.
+
+  </td>
+<tr>
+  <td>
+
+  **amountFrom**
+
+  </td>
+  <td>
+
+  _string_ — Amount of currency the user is going to pay.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **country**
+
+  </td>
+  <td>
+
+  _string_ — Country ISO 3166-1 code (Alpha-2).
+
+  </td>
+<tr>
+  <td>
+
+  (optional) **state**
+
+  </td>
+  <td>
+
+  _string_ — State ISO 3166-2 code. Is required if the provided country is US.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **ip**
+
+  </td>
+  <td>
+
+  _string_ — User's IP address.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyGetOffersResponse
 
@@ -419,13 +789,90 @@ interface Offer {
 
 **Properties**
 
-- **providerCode**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
-- **rate**: _string_ — The best rate of purchase among all payment methods. The rate includes all the fees.
-- **invertedRate**: _string_ — Inverted rate of purchase.
-- **fee**: _string_ — The lowest value of the total fee of purchase among all payment methods.
-- **amountFrom**: _string_ — Amount of currency the user is going to pay.
-- **amountExpectedTo**: _string_ — The largest amount of funds among all payment methods that the user is expected to get after the purchase.
-- **paymentMethodOffers**: [_ChangellyPaymentMethodOffer_](#changellypaymentmethodoffer)[] — Purchase details for each available payment type. Payment methods other than "card" will be available later.
+<table><tbody>
+<tr>
+  <td>
+
+  **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **rate**
+
+  </td>
+  <td>
+
+  _string_ — The best rate of purchase among all payment methods. The rate includes all the fees.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **invertedRate**
+
+  </td>
+  <td>
+
+  _string_ — Inverted rate of purchase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **fee**
+
+  </td>
+  <td>
+
+  _string_ — The lowest value of the total fee of purchase among all payment methods.
+
+  </td>
+<tr>
+  <td>
+
+  **amountFrom**
+
+  </td>
+  <td>
+
+  _string_ — Amount of currency the user is going to pay.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **amountExpectedTo**
+
+  </td>
+  <td>
+
+  _string_ — The largest amount of funds among all payment methods that the user is expected to get after the purchase.
+
+  </td>
+<tr>
+  <td>
+
+  **paymentMethodOffers**
+
+  </td>
+  <td>
+
+  [_ChangellyPaymentMethodOffer_](#changellypaymentmethodoffer)[] — Purchase details for each available payment type. Payment methods other than "card" will be available later.
+
+  </td>
+</tr>
+</tbody></table>
 
 #### Fail offer
 
@@ -448,10 +895,56 @@ interface Offer {
 
 **Properties**
 
-- **providerCode**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
-- **errorType**: [_ChangellyErrorType_](#changellyerrortype) _(Timeout, Unavailable, Limits, Country, State, Currency, PaymentMethod, InvalidOffer)_ — Error type.
-- **errorMessage**: _string_ — Error message.
-- **errorDetails**: [_ChangellyErrorDetails_](#changellyerrordetails)[] | null — Error details. If the error contains no details, `errorDetails` equals null.
+<table><tbody>
+<tr>
+  <td>
+
+  **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **errorType**
+
+  </td>
+  <td>
+
+  [_ChangellyErrorType_](#changellyerrortype) _(Timeout, Unavailable, Limits, Country, State, Currency, PaymentMethod, InvalidOffer)_ — Error type.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **errorMessage**
+
+  </td>
+  <td>
+
+  _string_ — Error message.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **errorDetails**
+
+  </td>
+  <td>
+
+  [_ChangellyErrorDetails_](#changellyerrordetails)[] | null — Error details. If the error contains no details, `errorDetails` equals null.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyCreateOrderParams
 
@@ -476,22 +969,178 @@ type ChangellyCreateOrderParams = {
 
 **Properties**
 
-- **externalOrderId**: _string_ — Order ID provided by you.
-- **externalUserId**: _string_ — User ID provided by you.
-- **providerCode**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
-- **currencyFrom**: _string_ — Ticker of the pay-in currency in uppercase.
-- **currencyTo**: _string_ — Ticker of the payout currency in uppercase.
-- **amountFrom**: _string_ — Amount of currency the user is going to pay.
-- **country**: _string_ — Country ISO 3166-1 code (Alpha-2).
-- (optional) **state**: _string_ — State ISO 3166-2 code. Is required if the provided country is US.
-- (optional) **ip**: _string_ — User's IP address.
-- **walletAddress**: _string_ — Recipient wallet address. Here are 2 simple use cases of this parameter:
+<table><tbody>
+<tr>
+  <td>
+
+  **externalOrderId**
+
+  </td>
+  <td>
+
+  _string_ — Order ID provided by you.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **externalUserId**
+
+  </td>
+  <td>
+
+  _string_ — User ID provided by you.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **currencyFrom**
+
+  </td>
+  <td>
+
+  _string_ — Ticker of the pay-in currency in uppercase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **currencyTo**
+
+  </td>
+  <td>
+
+  _string_ — Ticker of the payout currency in uppercase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **amountFrom**
+
+  </td>
+  <td>
+
+  _string_ — Amount of currency the user is going to pay.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **country**
+
+  </td>
+  <td>
+
+  _string_ — Country ISO 3166-1 code (Alpha-2).
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **state**
+
+  </td>
+  <td>
+
+  _string_ — State ISO 3166-2 code. Is required if the provided country is US.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **ip**
+
+  </td>
+  <td>
+
+  _string_ — User's IP address.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **walletAddress**
+
+  </td>
+  <td>
+
+  _string_ — Recipient wallet address. Here are 2 simple use cases of this parameter:
   - If you want to provide the cryptocurrency purchase service, you should enable the user to specify the wallet address.
   - If you want to sell your products for fiat and receive cryptocurrency in your wallet, you should specify your own wallet address.
-- (optional) **walletExtraId**: _string_ — Property required for wallet addresses of currencies that use an additional ID for transaction processing (XRP, XLM, EOS, BNB).
-- (optional) **paymentMethod**: [_ChangellyPaymentMethod_](#changellypaymentmethod) — The payment method code.
-- (optional) **userAgent**: _string_ — User Agent.
-- (optional) **metadata**: _Record<string, unknown>_ — Metadata object, which can contain any parameters you need.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **walletExtraId**
+
+  </td>
+  <td>
+
+  _string_ — Property required for wallet addresses of currencies that use an additional ID for transaction processing (XRP, XLM, EOS, BNB).
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **paymentMethod**
+
+  </td>
+  <td>
+
+  [_ChangellyPaymentMethod_](#changellypaymentmethod) — The payment method code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **userAgent**
+
+  </td>
+  <td>
+
+  _string_ — User Agent.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **metadata**
+
+  </td>
+  <td>
+
+  _Record<string, unknown>_ — Metadata object, which can contain any parameters you need.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyCreateOrderResponse
 
@@ -519,23 +1168,212 @@ interface ChangellyCreateOrderResponse {
 
 **Properties**
 
-- **redirectUrl**: _string_ — URL to the provider's purchase page.
-- **orderId**: _string_ — Internal order ID provided by Fiat API.
-- **externalUserId**: _string_ — User ID provided by you.
-- **externalOrderId**: _string_ — Order ID provided by you.
-- **providerCode**: [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
-- **currencyFrom**: _string_ — Ticker of the pay-in currency in uppercase.
-- **currencyTo**: _string_ — Ticker of the payout currency in uppercase.
-- **amountFrom**: _string_ — Amount of currency the user is going to pay.
-- **country**: _string_ — Country ISO 3166-1 code (Alpha-2).
-- **state**: _string | null_ — State ISO 3166-2 code. Will be null if the provided country is not US.
-- **ip**: _string | null_ — User's IP address.
-- **walletAddress**: _string_ — Recipient wallet address.
-- **walletExtraId**: _string | null_ — Property required for wallet addresses of currencies that use an additional ID for transaction processing (XRP, XLM, EOS, BNB).
-- **paymentMethod**: [_ChangellyPaymentMethod_](#changellypaymentmethod) | null — The payment method code.
-- **userAgent**: _string | null_ — User Agent.
-- **metadata**: _Record<string, unknown> | null_ — Metadata object, which can contain any parameters you need. If you don't provide the metadata object in the request, null will be returned in metadata in the response. If you specify an empty object in the request, an empty object will be returned in the response.
-- **createdAt**: _string_ — Time in ISO 8601 format.
+<table><tbody>
+<tr>
+  <td>
+
+  **redirectUrl**
+
+  </td>
+  <td>
+
+  _string_ — URL to the provider's purchase page.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **orderId**
+
+  </td>
+  <td>
+
+  _string_ — Internal order ID provided by Fiat API.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **externalUserId**
+
+  </td>
+  <td>
+
+  _string_ — User ID provided by you.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **externalOrderId**
+
+  </td>
+  <td>
+
+  _string_ — Order ID provided by you.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **providerCode**
+
+  </td>
+  <td>
+
+  [_ChangellyProvider_](#changellyprovider) — On-Ramp provider code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **currencyFrom**
+
+  </td>
+  <td>
+
+  _string_ — Ticker of the pay-in currency in uppercase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **currencyTo**
+
+  </td>
+  <td>
+
+  _string_ — Ticker of the payout currency in uppercase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **amountFrom**
+
+  </td>
+  <td>
+
+  _string_ — Amount of currency the user is going to pay.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **country**
+
+  </td>
+  <td>
+
+  _string_ — Country ISO 3166-1 code (Alpha-2).
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **state**
+
+  </td>
+  <td>
+
+  _string | null_ — State ISO 3166-2 code. Will be null if the provided country is not US.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **ip**
+
+  </td>
+  <td>
+
+  _string | null_ — User's IP address.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **walletAddress**
+
+  </td>
+  <td>
+
+  _string_ — Recipient wallet address.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **walletExtraId**
+
+  </td>
+  <td>
+
+  _string | null_ — Property required for wallet addresses of currencies that use an additional ID for transaction processing (XRP, XLM, EOS, BNB).
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **paymentMethod**
+
+  </td>
+  <td>
+
+  [_ChangellyPaymentMethod_](#changellypaymentmethod) | null — The payment method code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **userAgent**
+
+  </td>
+  <td>
+
+  _string | null_ — User Agent.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **metadata**
+
+  </td>
+  <td>
+
+  _Record<string, unknown> | null_ — Metadata object, which can contain any parameters you need. If you don't provide the metadata object in the request, null will be returned in metadata in the response. If you specify an empty object in the request, an empty object will be returned in the response.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **createdAt**
+
+  </td>
+  <td>
+
+  _string_ — Time in ISO 8601 format.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyValidateWalletAddressParams
 
@@ -549,9 +1387,44 @@ interface ChangellyValidateWalletAddressParams {
 
 **Properties**
 
-- **currency**: _string_ — Cryptocurrency ticker in uppercase.
-- **walletAddress**: _string_ — Recipient wallet address.
-- (optional) **walletExtraId**: _string_ — Property required for wallet addresses of currencies that use an additional ID for transaction processing (XRP, XLM, EOS, BNB).
+<table><tbody>
+<tr>
+  <td>
+
+  **currency**
+
+  </td>
+  <td>
+
+  _string_ — Cryptocurrency ticker in uppercase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **walletAddress**
+
+  </td>
+  <td>
+
+  _string_ — Recipient wallet address.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  (optional) **walletExtraId**
+
+  </td>
+  <td>
+
+  _string_ — Property required for wallet addresses of currencies that use an additional ID for transaction processing (XRP, XLM, EOS, BNB).
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyValidateWalletAddressResponse
 
@@ -564,8 +1437,32 @@ interface ChangellyValidateWalletAddressResponse {
 
 **Properties**
 
-- **result**: _boolean_ — Is false if the wallet address or extra ID is incorrect.
-- **cause**: "walletAddress" | "walletExtraId" | null — Specifies whether the wallet address or extra ID is incorrect. If the result is true, cause equals null.
+<table><tbody>
+<tr>
+  <td>
+
+  **result**
+
+  </td>
+  <td>
+
+  _boolean_ — Is false if the wallet address or extra ID is incorrect.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **cause**
+
+  </td>
+  <td>
+
+  "walletAddress" | "walletExtraId" | null — Specifies whether the wallet address or extra ID is incorrect. If the result is true, cause equals null.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyState
 
@@ -578,8 +1475,32 @@ interface ChangellyState {
 
 **Properties**
 
-- **code**: _string_ — State ISO 3166-2 code.
-- **name**: _string_ — State name.
+<table><tbody>
+<tr>
+  <td>
+
+  **code**
+
+  </td>
+  <td>
+
+  _string_ — State ISO 3166-2 code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **name**
+
+  </td>
+  <td>
+
+  _string_ — State name.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyPaymentMethodOffer
 
@@ -595,11 +1516,68 @@ interface ChangellyPaymentMethodOffer {
 
 **Properties**
 
-- **amountExpectedTo**: _string_ — The amount of funds that the user is expected to get after the purchase.
-- **method**: [_ChangellyPaymentMethod_](#changellypaymentmethod) — The payment method code.
-- **methodName**: _string_ — The payment method name.
-- **invertedRate**: _string_ — Current rate of purchase, which includes all the fees.
-- **fee**: _string_ — Total fee of the purchase.
+<table><tbody>
+<tr>
+  <td>
+
+  **amountExpectedTo**
+
+  </td>
+  <td>
+
+  _string_ — The amount of funds that the user is expected to get after the purchase.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **method**
+
+  </td>
+  <td>
+
+  [_ChangellyPaymentMethod_](#changellypaymentmethod) — The payment method code.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **methodName**
+
+  </td>
+  <td>
+
+  _string_ — The payment method name.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **invertedRate**
+
+  </td>
+  <td>
+
+  _string_ — Current rate of purchase, which includes all the fees.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **fee**
+
+  </td>
+  <td>
+
+  _string_ — Total fee of the purchase.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### ChangellyErrorDetails
 
@@ -612,8 +1590,32 @@ interface ChangellyErrorDetails {
 
 **Properties**
 
-- **cause**: _string_ — Error cause. For example, it can equal the missing request parameter for the validation error type.
-- **value**: _string_ — Error value.
+<table><tbody>
+<tr>
+  <td>
+
+  **cause**
+
+  </td>
+  <td>
+
+  _string_ — Error cause. For example, it can equal the missing request parameter for the validation error type.
+
+  </td>
+</tr>
+<tr>
+  <td>
+
+  **value**
+
+  </td>
+  <td>
+
+  _string_ — Error value.
+
+  </td>
+</tr>
+</tbody></table>
 
 ### Enumerations
 
