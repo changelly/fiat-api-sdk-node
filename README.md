@@ -17,13 +17,7 @@ This tutorial will walk you through the basics of creating a project that uses t
   > npm init --y
   ```
 
-  2. Add necessary Axios dependency:
-
-  ```bash
-  > npm install axios
-  ```
-
-  3. If you choose to use TypeScript, you can now add TypeScript features to this project. The following steps will install TypeScript, create a `tsconfig.json` file, and gain access to most built-in types for NodeJS:
+  2. If you choose to use TypeScript, you can now add TypeScript features to this project. The following steps will install TypeScript, create a `tsconfig.json` file, and gain access to most built-in types for NodeJS:
 
   ```bash
   > npm install typescript
@@ -31,14 +25,14 @@ This tutorial will walk you through the basics of creating a project that uses t
   > npm install -D @types/node
   ```
 
-  4. Add the Changelly Fiat API SDK to your project via Node Package Manager:
+  3. Add the Changelly Fiat API SDK to your project via Node Package Manager:
 
   ```bash
   > npm install @changelly/fiat-api-sdk-node
   ```
 
-  5. Set your API keys to an environment variable such as `CHANGELLY_PRIVATE_KEY` and `CHANGELLY_PUBLIC_KEY` so that it will not be committed to source control.
-  6. Create a basic `index.ts` file for your project that creates a Changelly Fiat API client:
+  4. Set your API keys to an environment variable such as `CHANGELLY_PRIVATE_KEY` and `CHANGELLY_PUBLIC_KEY` so that it will not be committed to source control.
+  5. Create a basic `index.ts` file for your project that creates a Changelly Fiat API client:
 
   ```typescript
   import { ChangellyFiatClient } from "@changelly/fiat-api-sdk-node";
@@ -49,7 +43,7 @@ This tutorial will walk you through the basics of creating a project that uses t
   });
   ```
 
-  7. Make an API call and check the result:
+  6. Make an API call and check the result:
 
   ```typescript
   const providers = await client.getProviderList();
@@ -57,7 +51,7 @@ This tutorial will walk you through the basics of creating a project that uses t
 
   console.log({ providers, currencies });
   ```
-  8. For more information, see [documentation](https://fiat-api.changelly.com/docs/#tag/Integration-guide/SDK).
+  7. For more information, see [documentation](https://fiat-api.changelly.com/docs/#tag/Integration-guide/SDK).
 
 # API Reference
 
