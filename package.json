@@ -41,5 +41,14 @@
     "rollup": "^3.29.4",
     "rollup-plugin-dts": "^6.0.2",
     "typescript": "^5.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/changelly/fiat-api-sdk-node.git"
+  },
+  "author": "changelly",
+  "bugs": {
+    "url": "https://github.com/changelly/fiat-api-sdk-node/issues"
+  },
+  "homepage": "https://github.com/changelly/fiat-api-sdk-node#readme"
 }
