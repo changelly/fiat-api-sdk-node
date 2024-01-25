@@ -1,6 +1,6 @@
 {
   "name": "@changelly/fiat-api-sdk-node",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Node.js SDK for Changelly Fiat API",
   "license": "MIT",
   "keywords": [

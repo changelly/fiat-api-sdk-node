@@ -11,7 +11,7 @@ This SDK allows you to work with the [Changelly Fiat API](https://fiat-api.chang
 
 This tutorial will walk you through the basics of creating a project that uses the Changelly Fiat API SDK.
 
-  1. First, run the following command to create a default `package.json` file::
+  1. First, run the following command to create a default `package.json` file:
 
   ```bash
   > npm init --y
