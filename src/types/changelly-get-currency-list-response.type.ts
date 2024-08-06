@@ -1,4 +1,5 @@
 import { ChangellyCurrency } from "../enums";
+import { ChangellyCurrencyProvider } from "./changelly-currency-provider.type";
 
 export interface ChangellyGetCurrencyListResponse {
   /**
@@ -15,6 +16,11 @@ export interface ChangellyGetCurrencyListResponse {
    * Currency type.
    */
   type: ChangellyCurrency;
+
+  /**
+   * Optional. Network type for crypto currencies. Example: 'binance_smart_chain'.
+   */
+  network?: string;
 
   /**
    * Extra ID name of the cryptocurrency, for example, "Memo". Extra ID is required for the following currencies:
@@ -36,4 +42,9 @@ export interface ChangellyGetCurrencyListResponse {
    * Currency precision. For fiat currencies, it is always equal to 2.
    */
   precision: string;
+
+  /**
+   * Provider list for the currency.
+   */
+  providers: ChangellyCurrencyProvider[];
 }

@@ -21,3 +21,4 @@ export * from "./changelly-too-many-requests-exception.type";
 export * from "./changelly-unauthorized-exception.type";
 export * from "./changelly-validate-wallet-address-params.type";
 export * from "./changelly-validate-wallet-address-response.type";
+export * from "./changelly-currency-provider.type";
