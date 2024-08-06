@@ -18,6 +18,11 @@ export interface ChangellyGetCurrencyListResponse {
   type: ChangellyCurrency;
 
   /**
+   * Optional. Network type for crypto currencies. Example: 'binance_smart_chain'.
+   */
+  network?: string;
+
+  /**
    * Extra ID name of the cryptocurrency, for example, "Memo". Extra ID is required for the following currencies:
    * - XRP
    * - XLM
