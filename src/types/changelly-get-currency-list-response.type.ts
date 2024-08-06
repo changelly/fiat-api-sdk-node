@@ -1,4 +1,4 @@
-import { ChangellyCurrency } from "../enums";
+import { ChangellyCurrency, ChangellyProvider } from "../enums";
 
 export interface ChangellyGetCurrencyListResponse {
   /**
@@ -36,4 +36,9 @@ export interface ChangellyGetCurrencyListResponse {
    * Currency precision. For fiat currencies, it is always equal to 2.
    */
   precision: string;
+
+  /**
+   * Provider list for the currency.
+   */
+  providers: ChangellyProvider[];
 }
