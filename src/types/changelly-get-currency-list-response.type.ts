@@ -1,4 +1,5 @@
-import { ChangellyCurrency, ChangellyProvider } from "../enums";
+import { ChangellyCurrency } from "../enums";
+import { ChangellyCurrencyProvider } from "./changelly-currency-provider.type";
 
 export interface ChangellyGetCurrencyListResponse {
   /**
@@ -40,5 +41,5 @@ export interface ChangellyGetCurrencyListResponse {
   /**
    * Provider list for the currency.
    */
-  providers: ChangellyProvider[];
+  providers: ChangellyCurrencyProvider[];
 }

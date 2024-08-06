@@ -1,6 +1,6 @@
 import { ChangellySupportedFlow } from "../enums";
 
-export interface ChangellyProvider {
+export interface ChangellyCurrencyProvider {
   /**
    * State ISO 3166-2 code.
    */
